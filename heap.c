@@ -25,7 +25,8 @@ Heap* createHeap(){
 }
 
 void* heap_top(Heap* pq){
-    return NULL;
+    heapElem* primero = pq->heapArray[0];
+    return primero->data;
 }
 
 

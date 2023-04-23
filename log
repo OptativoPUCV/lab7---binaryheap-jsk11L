@@ -8,3 +8,13 @@ Sun 23 Apr 2023 12:17:16 AM UTC:
  tests:  1|3
 total_score: 10/70
 0b3f31e
+Sun 23 Apr 2023 12:19:59 AM UTC: 
+ heap.c | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+In file included from test.c:4:
+heap.c: In function ‘heap_top’:
+heap.c:28:25: error: incompatible types when initializing type ‘heapElem *’ {aka ‘struct nodo *’} using type ‘heapElem’ {aka ‘struct nodo’}
+   28 |     heapElem* primero = pq->heapArray[0];
+      |                         ^~
+Compilation failed
+47f0dfc
