@@ -18,3 +18,17 @@ heap.c:28:25: error: incompatible types when initializing type ‘heapElem *’ 
       |                         ^~
 Compilation failed
 47f0dfc
+Sun 23 Apr 2023 12:21:58 AM UTC: 
+ heap.c | 3 +--
+ 1 file changed, 1 insertion(+), 2 deletions(-)
+In file included from test.c:4:
+heap.c: In function ‘heap_top’:
+heap.c:28:28: error: invalid type argument of ‘->’ (have ‘heapElem’ {aka ‘struct nodo’})
+   28 |     return pq->heapArray[0]->data;
+      |                            ^~
+heap.c:29:1: error: control reaches end of non-void function [-Werror=return-type]
+   29 | }
+      | ^
+cc1: all warnings being treated as errors
+Compilation failed
+0b4fd6e
