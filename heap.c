@@ -16,6 +16,13 @@ typedef struct Heap{
   int capac;
 } Heap;
 
+Heap* createHeap(){
+   Heap* monticulo = (Heap*) malloc(sizeof(Heap));
+   monticulo->heapArray = (heapElem*) calloc(3, sizeof(heapElem));
+   monticulo->size = 0;
+   monticulo->capac = 3;
+   return monticulo;
+}
 
 void* heap_top(Heap* pq){
     return NULL;
@@ -30,9 +37,4 @@ void heap_push(Heap* pq, void* data, int priority){
 
 void heap_pop(Heap* pq){
 
-}
-
-Heap* createHeap(){
-
-   return NULL;
 }
