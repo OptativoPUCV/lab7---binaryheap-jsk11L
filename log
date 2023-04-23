@@ -44,3 +44,20 @@ Sun 23 Apr 2023 12:22:23 AM UTC:
  tests:  2|2
 total_score: 20/70
 261aa4b
+Sun 23 Apr 2023 12:30:15 AM UTC: 
+ heap.c | 15 ++++++++++++++-
+ 1 file changed, 14 insertions(+), 1 deletion(-)
+In file included from test.c:4:
+heap.c: In function ‘heap_push’:
+heap.c:35:44: error: passing argument 1 of ‘realloc’ makes pointer from integer without a cast [-Werror=int-conversion]
+   35 |     pq->heapArray = (heapElem *) realloc(pq->capac, sizeof(heapElem));
+      |                                          ~~^~~~~~~
+      |                                            |
+      |                                            int
+In file included from test.c:2:
+/nix/store/4pqv2mwdn88h7xvsm7a5zplrd8sxzvw0-glibc-2.35-163-dev/include/stdlib.h:551:29: note: expected ‘void *’ but argument is of type ‘int’
+  551 | extern void *realloc (void *__ptr, size_t __size)
+      |                       ~~~~~~^~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+30d3b29
