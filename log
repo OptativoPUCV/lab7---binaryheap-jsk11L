@@ -107,3 +107,14 @@ Sun 23 Apr 2023 01:00:17 AM UTC:
  tests:  7|1
 total_score: 45/70
 62974d8
+Sun 23 Apr 2023 01:24:41 AM UTC: 
+ heap.c | 25 ++++++++++++++++---------
+ 1 file changed, 16 insertions(+), 9 deletions(-)
+In file included from test.c:4:
+heap.c: In function ‘heap_pop’:
+heap.c:62:60: error: ‘pq’ is a pointer; did you mean to use ‘->’?
+   62 |     if(posD < pq->size && pq->heapArray[posD].priority > pq.heapArray[posI].priority) hijo = posD;
+      |                                                            ^
+      |                                                            ->
+Compilation failed
+a649d66
