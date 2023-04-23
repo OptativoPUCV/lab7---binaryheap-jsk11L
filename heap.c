@@ -45,10 +45,13 @@ void heap_push(Heap* pq, void* data, int priority){
   pq->heapArray[pos].priority = priority;
   pq->heapArray[pos].data = data;
   pq->size++;
-
 }
 
 
 void heap_pop(Heap* pq){
+  pq->
 
+
+  
+  pq->size--;
 }
