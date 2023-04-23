@@ -58,7 +58,7 @@ void heap_pop(Heap* pq){
     
     heapElem aux = pq->heapArray[(pos-1)/2];
     pq->heapArray[(pos-1)/2] = pq->heapArray[pos];
-    pq->heapArray pos = aux;
+    pq->heapArray[pos] = aux;
     pos = (pos*2)+1;
     
   }
